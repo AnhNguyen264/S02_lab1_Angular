@@ -1,0 +1,68 @@
+<h1>{{ title }} Pour l’amour de la musique!</h1>
+
+<h3>Mon artiste préféré</h3>
+<p>{{varArtiste}} a enregistré {{varNbrAlbum}} albums.</p>
+
+
+<h4>Quelques albums:</h4>
+<ol>
+  <li *ngFor="let n of lstAllbums">{{n}}</li>
+</ol>
+
+<h3>Entrez vos infos</h3>
+<!-- <ul>
+  <li *ngFor="let s of varNom">Nom: {{s}}</li>
+</ul>
+
+<form (ngSubmit) ="addNom()">
+  <input type="text" name="name" [(ngModel)] ="s">
+  <input type="submit" value="Ajouter nom">
+</form>
+
+
+  <ul>
+    <li *ngFor="let p of varPreNom">Prenom: {{p}}</li>
+  </ul>
+  <form (ngSubmit) ="addPreNom()">
+    <input type="text" name="name" [(ngModel)] ="p">
+    <input type="submit" value="Ajouter Prenom">
+  </form>
+
+  <ul>
+    <li *ngFor="let a of varAge">Age: {{a}}</li>
+  </ul>
+  <form (ngSubmit) ="addNAge()">
+    <input type="number" name="name" [(ngModel)] ="a">
+    <input type="submit" value="Ajouter Age">
+  </form> -->
+
+  <ul>
+    
+    <li *ngFor="let s of varNom">Nom: {{s}}</li>
+
+    <li *ngFor="let p of varPreNom">Prenom: {{p}}</li>
+    
+    <li *ngFor="let a of varAge">Age: {{a}}</li>
+
+  </ul>
+  <form (ngSubmit) ="addNom()">
+    nom
+    <input type="text" name="name" [(ngModel)] ="s">
+    prenom
+    <input type="text" name="name" [(ngModel)] ="p">
+    age
+    <input type="number" name="name" [(ngModel)] ="a">
+    <input type="submit" value="Ajouter Infos">
+  </form>
+
+
+    <h3>Liste Pass temps</h3>
+
+    <ol>
+      <li *ngFor="let t of passeTemps">{{t}}</li>
+    </ol>
+    <form (ngSubmit) ="addHobby()">
+      <input type="text" name="name" [(ngModel)] ="t">
+      <input type="submit" value="Ajouter Une passe temps">
+    </form> 
+<router-outlet></router-outlet>
