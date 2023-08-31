@@ -1,0 +1,17 @@
+<h1>{{ title }} Pour l’amour de la musique!</h1>
+
+<h3>Mpn artise prefere est {{varArtise}}</h3>
+<p>{{varArtise}} a enregistre' {{varNbrAlbum}} albums</p>
+
+<h3>Quelques albums</h3>
+<ol>
+  <li *ngFor="let a of lstAlbums">
+        {{a}}
+  </li>
+</ol>
+
+<h3>Les concerts</h3>
+<p *ngFor="let c of lstConcerts">Vile: {{c.ville}}, Salle: {{c.Salle}}
+  <span *ngIf="c.assister == false"> ...hum la Salle {{c.Salle}} est plein...</span>
+</p>
+<router-outlet></router-outlet>
