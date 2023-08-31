@@ -7,4 +7,18 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Exer1';
+
+  varArtise: string;
+  varNbrAlbum= 10;
+
+
+  lstAlbums=["Born Pink", "The Album", "BlackPink2021", "Kill this love"]
+  constructor() {
+    this.varArtise = "BlackPink";
+
+    
+  
+  }
+
+
 }
